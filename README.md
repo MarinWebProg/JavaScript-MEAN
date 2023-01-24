@@ -1,10 +1,10 @@
-# Curso de JavaScript -JavaScript-MEAN
+# Curso de JavaScript - JavaScript-MEAN
 
 Curso de Máster en JavaScript
 de udemy.
 *Puede ir cambiando donde me quede*
 
-# Secciones del cursos (Progresa)
+# Secciones del cursos (Progreso)
 ## Node JS
 Secciones     | Completadas
 ------------- | -------------
