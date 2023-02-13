@@ -30,7 +30,7 @@ npm install [nombre de las dependencias] --save-dev
 
 ## Para inciar proyecto con NodeJs:
 ```bash
-
+npm start
 ```
 
 ## Para generar componentes en AngularJS:

@@ -4,9 +4,10 @@ var app = require('./app');
 var port = 3700;
 
 
-
+//Realizar la conexion
 mongoose.Promise= global.Promise;
-mongoose.connect('mongodb://localhost:27017/portafolio')
+//Accediendo a la conexion
+mongoose.connect('mongodb://localhost:27017/portafolio', {useNewUrlParser: true})
 .then(() =>{
     console.log("Conexion exitosa :D, fieeeesta")
     //Creacion del servidor
