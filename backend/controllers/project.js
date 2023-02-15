@@ -48,24 +48,77 @@ var controller = {
         });
     },
 
+    //Para encontrar mediante Id 
     getProject: function(req,res){
         let projectID = req.params.id;
 
+        if(projectID ==null) return res.status(404).send({
+            message: 'El proyecto no existe padrino :o .'
+        });
+
         Project.findById(projectID, (err, project) =>{
             if(err) return res.status(500).send({
-                message: 'Error al devolver el resultado padrino'
+                message: 'Error al devolver el resultado de datos padrino'
             });
 
-            if(!projectStored) return res.status(404).send({
+            if(!project) return res.status(404).send({
                 message: 'No existe el documento padrino :O'
             });
 
-            // return res.status(200).send({
-            //         project: 
-            //     });
+            return res.status(200).send({
+                    project
+                });
 
         });
-    }
+    },
+
+    //Para encontrar/filtar  
+    getProjects: function(req,res){
+        Project.find({}).exec((err,projects) => {
+        //Project.find({year:2023}).exec((err,projects) => { -- para encontrar un dato en especifico
+        //Project.find({}).exec((err,projects) => { -- para mostrar toda la coleccion
+        //Project.find({}).sort('year' o '-year').exec((err,projects) => { -- para ordenar con un campo(de mayor o menor o viceversa)
+            if(err) return res.status(500).send({
+                message: 'Error al devolver los datoooos :o'
+            });
+
+            
+            if(!project) return res.status(404).send({
+                message: 'No hay proyectos para mostrar padrino :O'
+            });
+
+            return res.status(200).send({
+                projects
+            });
+
+        });
+    },
+
+    updateProject: function(req,res){
+       let projectID = req.params.id;
+       let update = req.body;
+       
+       //Es un update que busca por un id
+       Project.findOneAndReplace(projectID,update,(err, projectUpdated) => {
+        if(err) return res.status(500).send({
+            message: 'Error al actualizar :c'
+        });
+
+        
+        if(!projectUpdated) return res.status(404).send({
+            message: 'No existe el proyecto padrino para actualizarlo :C'
+        });
+
+        return res.status(200).send({
+            project: projectUpdated
+        });
+       });
+
+    },
+
+
+
+
 
 };
 
