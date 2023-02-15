@@ -95,11 +95,10 @@ var controller = {
     },
 
     updateProject: function(req,res){
-       let projectID = req.params.id;
        let update = req.body;
        
        //Es un update que busca por un id
-       Project.findOneAndReplace(projectID,update,(err, projectUpdated) => {
+       Project.findByIdAndUpdate(req.params.id,update,(err, projectUpdated) => {
         if(err) return res.status(500).send({
             message: 'Error al actualizar :c'
         });
