@@ -8,7 +8,8 @@ de udemy.
 ## Node JS
 Secciones     | Completadas
 ------------- | -------------
-60- ??          | En progreso - (NodeJS: Javascript en el servidor, Empezando a desarrollar un backend con NodeJs).
+60 - 64       | Completado - (NodeJS: Javascript en el servidor, Empezando a desarrollar un backend con NodeJs, El Controlador del backend de Node, Subir Archivos en NodeJs)
+65 - ??       | En progreso - (Primeros pasos en el proyecto de Angular(MEAN stack), ).
 
 
 <!-- ## -------- Finalizado -------- ## -->
