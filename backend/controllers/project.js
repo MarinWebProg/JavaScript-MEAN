@@ -114,6 +114,28 @@ var controller = {
        });
 
     },
+    //Para borrar algo en la coleccion
+    deleteProject: function(req,res){
+        let projectID = req.params.id;
+
+        Project.findByIdAndDelete(projectID,(err,deleteProject) => {
+            
+            if(err) return res.status(500).send({
+                message: 'Error al Borrar el proyecto unu'
+            });
+    
+            
+            if(!deleteProject) return res.status(404).send({
+                message: 'No se puede eliminar ese proyecto :C'
+            });
+    
+            return res.status(200).send({
+                project: deleteProject
+            });
+
+        });
+
+    }
 
 
 

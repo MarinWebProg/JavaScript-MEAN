@@ -12,5 +12,6 @@ route.post('/save-project', projectController.saveProject);// Para guardar nuevo
 route.get('/project/:id?', projectController.getProject); //Para encontrar por id
 route.get('/projects/', projectController.getProjects); //Para encontrar mediante paramtros
 route.put('/project/:id', projectController.updateProject);//Para actualizar
+route.delete('/project/:id', projectController.deleteProject);//Para borrar 
 
 module.exports = route;
