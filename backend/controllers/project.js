@@ -135,7 +135,20 @@ var controller = {
 
         });
 
-    }
+    },
+
+    //Para subir arcivhos/ficheros
+    uploadImage: function(req,res){
+        let projectID = req.params.id;
+        let fileName = 'Imagen no subida UnU'
+
+        if(req.files){
+            //console.log(req.files);
+            let filePath = req.files.image.filePath;
+            let fileSplit = filePath.split("\\");
+            let fileName = filePath.split[1];
+        }
+    },
 
 
 
