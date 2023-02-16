@@ -138,17 +138,33 @@ var controller = {
     },
 
     //Para subir arcivhos/ficheros
-    uploadImage: function(req,res){
-        let projectID = req.params.id;
-        let fileName = 'Imagen no subida UnU'
-
-        if(req.files){
-            //console.log(req.files);
-            let filePath = req.files.image.filePath;
-            let fileSplit = filePath.split("\\");
-            let fileName = filePath.split[1];
-        }
-    },
+    uploadImage: function(req, res){
+		var projectId = req.params.id;
+		var fileName = 'Imagen no subida...';
+ 
+		if(req.files){
+			var filePath = req.files.image.path;
+			var fileSplit = filePath.split('\\');
+			var fileName = fileSplit[1];
+ 
+			Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated)=>{
+ 
+				if(err) return res.status(500).send({message: 'La imagen no se ha subido'});
+ 
+				if(!projectUpdated) return res.status(404).send({message: 'No existe el proyecto para asubir la imagen'});
+ 
+				return res.status(200).send({
+					project: projectUpdated
+				});
+			});
+			
+		}
+		else{
+			return res.status(200).send({
+				message: fileName
+			});
+		}
+	},
 
 
 
