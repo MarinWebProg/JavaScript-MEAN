@@ -1,9 +1,10 @@
 'use strict'
 
 const project = require('../models/project');
-var Project = require('../models/project');
+let Project = require('../models/project');
+let fs = require('fs');
 
-var controller = {
+let controller = {
 
     home:function(req,res){
         return res.status(200).send({
@@ -20,7 +21,7 @@ var controller = {
     saveProject: function(req,res){
         let project = new Project();
         
-        var params = req.body;//Son los datos del modelo que le asignamos
+        let params = req.body;//Son los datos del modelo que le asignamos
         project.name = params.name;
         project.description = params.description;
         project.category = params.category;
@@ -139,27 +140,39 @@ var controller = {
 
     //Para subir arcivhos/ficheros
     uploadImage: function(req, res){
-		var projectId = req.params.id;
-		var fileName = 'Imagen no subida...';
+		let projectId = req.params.id;
+		let fileName = 'Imagen no subida...';
  
 		if(req.files){
-			var filePath = req.files.image.path;
-			var fileSplit = filePath.split('\\');
-			var fileName = fileSplit[1];
+			let filePath = req.files.image.path;
+			let fileSplit = filePath.split('\\');
+			let fileName = fileSplit[1];
+            let extSplit = fileName.split('\.');
+            let fileExt = extSplit[1];
+            
+
+            if(fileExt === 'png' || fileExt === 'jpg' || fileExt === 'jpeg' || fileExt === 'gif'){
+                Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated)=>{
  
-			Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdated)=>{
- 
-				if(err) return res.status(500).send({message: 'La imagen no se ha subido'});
- 
-				if(!projectUpdated) return res.status(404).send({message: 'No existe el proyecto para asubir la imagen'});
- 
-				return res.status(200).send({
-					project: projectUpdated
-				});
-			});
+                    if(err) return res.status(500).send({message: 'La imagen no se ha subido'});
+     
+                    if(!projectUpdated) return res.status(404).send({message: 'No existe el proyecto para asubir la imagen'});
+     
+                    return res.status(200).send({
+                        project: projectUpdated
+                    });
+                });
+
+            }else{
+                //Es como un borrado ya que se encargara de borrar lo que no pase en el filtro
+                fs.unlink(filePath, (err) =>{
+                    return res.status(200).send({
+                        message: 'La extension no es valida, intente con otro '
+                    });
+                });
+            }
 			
-		}
-		else{
+		}else{
 			return res.status(200).send({
 				message: fileName
 			});
