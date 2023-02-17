@@ -9,9 +9,13 @@ import { ErrorComponent } from "./components/error/error.component";
 
 const appRoutes: Routes = [
   {path: '', component: AboutmeComponent},
-  {path: 'Sobre-mi', component: AboutmeComponent},
-  {path: 'Proyecto', component: ProjectsComponent},
-  {path: 'Crear-proyecto', component: CreateProjectsComponent},
-  {path: 'Contacto', component: ContactComponent},
-  {path: '404', component:ErrorComponent },
+  {path: 'sobre-mi', component: AboutmeComponent},
+  {path: 'proyecto', component: ProjectsComponent},
+  {path: 'crear-proyecto', component: CreateProjectsComponent},
+  {path: 'contacto', component: ContactComponent},
+  {path: '**', component:ErrorComponent },
 ];
+
+
+export const appRoutingProviders: any[] =[];
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);

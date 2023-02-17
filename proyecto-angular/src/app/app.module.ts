@@ -8,6 +8,8 @@ import { CreateProjectsComponent } from './components/create-projects/create-pro
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 
+import { routing,appRoutingProviders } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +20,10 @@ import { ErrorComponent } from './components/error/error.component';
     ErrorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
