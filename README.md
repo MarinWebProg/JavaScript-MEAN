@@ -33,7 +33,12 @@ npm install [nombre de las dependencias] --save-dev
 ```bash
 npm start
 ```
+# Comandos para Angular
 
+## Para iniciar proyecto en AngularJS:
+```bash
+ng serve
+```
 ## Para generar componentes en AngularJS:
 ```bash
 ng g component [Nombre del componente]
