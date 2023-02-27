@@ -20,9 +20,9 @@
 }
 
 body{
-  font-family: "Imperial", Arial, Helvetica;
-  /* font-family: "yanone", Arial, Helvetica; */
-  font-size: 11px;
+  /* font-family: "Imperial", Arial, Helvetica; */
+  font-family: "yanone", Arial, Helvetica;
+  font-size: 20px;
   background: url("../img/pattern.png");
   background-attachment: fixed;
 }
@@ -44,16 +44,17 @@ header{
 
 header ul{
   display: block;
-  width: 38%;
+  width: 39%;
   height: inherit;
   margin: 0px auto;
+  margin-top: -1px;
 }
 
 header ul li{
   display: inline-block;
   width: 0px auto;
   text-align: center;
-  line-height: 90px;
+  line-height: 88px;
 }
 
 header a{
@@ -70,6 +71,18 @@ header a:hover{
   background: rgba(0, 0, 0, 0.8);
 }
 
-header #logo a:hover{
+/*Logotipo*/
+#logo{
+  font-family: "Imperial", Arial, Helvetica;
+  font-size: 30px;
+}
+
+#logo a{
+ transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
   background: transparent;
+  color: black;
+  transform: scale(1.50,1.50);
 }
