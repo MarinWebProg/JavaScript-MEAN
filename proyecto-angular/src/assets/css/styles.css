@@ -1,3 +1,4 @@
+/*Fuentes importadas*/
 @font-face {
   font-family: "yanone" ;
   src: url("fonts/yanone.ttf");
@@ -8,8 +9,30 @@
 }
 
 
+/*Generales*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
 body{
   font-family: "yanone", Arial, Helvetica;
-  background: pink;
+  font-size: 20px;
+  background: url("../img/pattern.png");
+  background-attachment: fixed;
+}
+
+.clearfix{
+  float: none;
+  clear: none;
+}
+
+/*Barra de navegacion / Y la cabezera*/
+header{
+  display: block;
+  width: 100%;
+  height: 90px;
+  background: rgb(45, 15, 80,0.8);
+  position: fixed; /*Fixed: deja el elemento fijo y ala vez a la par del tamaño de la pantalla para que no haya un problema de diseño*/
+  text-transform: uppercase;
 }

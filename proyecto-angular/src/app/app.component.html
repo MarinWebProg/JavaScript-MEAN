@@ -1,14 +1,23 @@
 <h1>Proyecto Angular-MEAN</h1>
-  <li><a [routerLink]="['/sobre-mi']">Sobre mi</a></li>
-  <li><a [routerLink]="['/proyecto']">Proyectos</a></li>
-  <li><a [routerLink]="['/crear-proyecto']">Creacion de proyecto</a></li>
-  <li><a [routerLink]="['/contacto']">Contactame</a></li>
-<ul>
 
-</ul>
+<header>
+  <ul>
+    <li><a [routerLink]="['/sobre-mi']">Sobre mi</a></li>
+    <li><a [routerLink]="['/proyecto']">Proyectos</a></li>
+    <li><a href="#">S.A.M.S</a></li>
+    <li><a [routerLink]="['/crear-proyecto']">Creacion de proyecto</a></li>
+    <li><a [routerLink]="['/contacto']">Contactame</a></li>
+  </ul>
+</header>
 
 
 
 
 <!-- Para acceder al routeo mediante el link -->
-<router-outlet></router-outlet>
+<section id="section">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Master en Js de Sergio A. Marin Sarmiento &copy;
+</footer>
