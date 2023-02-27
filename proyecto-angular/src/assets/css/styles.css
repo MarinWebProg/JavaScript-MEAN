@@ -7,6 +7,10 @@
   font-family: "finger" ;
   src: url("fonts/finger.ttf");
 }
+@font-face{
+  font-family: "Imperial";
+  src: url("fonts/Imperial.ttf");
+}
 
 
 /*Generales*/
@@ -16,8 +20,9 @@
 }
 
 body{
-  font-family: "yanone", Arial, Helvetica;
-  font-size: 20px;
+  font-family: "Imperial", Arial, Helvetica;
+  /* font-family: "yanone", Arial, Helvetica; */
+  font-size: 11px;
   background: url("../img/pattern.png");
   background-attachment: fixed;
 }
@@ -35,4 +40,36 @@ header{
   background: rgb(45, 15, 80,0.8);
   position: fixed; /*Fixed: deja el elemento fijo y ala vez a la par del tamaño de la pantalla para que no haya un problema de diseño*/
   text-transform: uppercase;
+}
+
+header ul{
+  display: block;
+  width: 38%;
+  height: inherit;
+  margin: 0px auto;
+}
+
+header ul li{
+  display: inline-block;
+  width: 0px auto;
+  text-align: center;
+  line-height: 90px;
+}
+
+header a{
+  display: block;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: inherit;
+  text-decoration: none;
+  color: white;
+  transition: all 300ms;
+}
+
+header a:hover{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+header #logo a:hover{
+  background: transparent;
 }
