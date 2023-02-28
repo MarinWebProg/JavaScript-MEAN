@@ -44,7 +44,7 @@ header{
 
 header ul{
   display: block;
-  width: 39%;
+  width: 42%;
   height: inherit;
   margin: 0px auto;
   margin-top: -1px;
@@ -85,4 +85,16 @@ header a:hover{
   background: transparent;
   color: black;
   transform: scale(1.50,1.50);
+}
+
+/*Contenedor principal-Espacio principal*/
+#content{
+  min-height: 500PX;
+  padding-top: 120PX;
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 40px black;
+  background: rgba(255, 255, 255, 0.7);
+  border-left:1px solid #b7b7b7 ;
+  border-right:1px solid #b7b7b7 ;
 }
