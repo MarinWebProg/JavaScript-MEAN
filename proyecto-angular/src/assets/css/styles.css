@@ -1,4 +1,5 @@
 /*Fuentes importadas*/
+/*Fuentes importadas*/
 @font-face {
   font-family: "yanone" ;
   src: url("fonts/yanone.ttf");
@@ -13,6 +14,11 @@
 }
 
 
+/*Generales*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
 /*Generales*/
 *{
   margin: 0px;
