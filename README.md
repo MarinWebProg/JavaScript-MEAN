@@ -9,7 +9,7 @@ de udemy.
 Secciones     | Completadas
 ------------- | -------------
 60 - 64       | Completado - (NodeJS: Javascript en el servidor, Empezando a desarrollar un backend con NodeJs, El Controlador del backend de Node, Subir Archivos en NodeJs)
-65 - ??       | En progreso - (Primeros pasos en el proyecto de Angular(MEAN stack), ).
+65 - ??       | En progreso - (Primeros pasos en el proyecto de Angular(MEAN stack),Maquetacion del sitio web tipo portafolio, Página principal (webbapp con Angular), Seccion de creacion de nuevos elementos (proyecto portafolio),  ).
 
 
 <!-- ## -------- Finalizado -------- ## -->
@@ -29,7 +29,7 @@ npm install [nombre de las dependencias] --save
 npm install [nombre de las dependencias] --save-dev
 ```
 
-## Para inciar proyecto con NodeJs:
+## Para inciar proyecto con NodeJs/Iniciar API REST:
 ```bash
 npm start
 ```

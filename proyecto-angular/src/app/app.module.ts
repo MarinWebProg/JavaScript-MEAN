@@ -26,7 +26,9 @@ import { routing,appRoutingProviders } from './app.routing';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
