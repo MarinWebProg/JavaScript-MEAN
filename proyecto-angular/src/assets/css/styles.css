@@ -167,7 +167,7 @@ article.about{
   margin-bottom: 15px;
 }
 form{
-  width: 50px;
+  width: 80%;
 }
 
 form label{
@@ -181,7 +181,7 @@ form input[type="text"],
 form input[type="email"],
 form input[type="number"],
 form textarea{
-  width: 500%;
+  width: 40%;
   padding: 5px;
 }
 /*Para darle estilo a los botones incluyendo el submit*/
@@ -201,4 +201,16 @@ form input[type="submit"]:hover{
   color: white;
   background: rgb(45, 15, 80,0.8);
   border: 1px solid rgb(45, 15, 80,1); /*Se puede usar igual el metodo rgb en border*/
+}
+form input[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+/*Para los estilos de los validaciones del formulario*/
+.form_error{
+  font-size: 15px;
+  padding: 5px;
+  background: red;
+  color: white;
+  margin-left: 5px;
 }
