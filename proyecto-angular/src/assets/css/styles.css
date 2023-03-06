@@ -155,7 +155,6 @@ article.about{
   text-align: justify;
 }
 
-
 /*Seccion - Creacion de proyecto*/
 .container{
   padding: 50px;
@@ -170,6 +169,7 @@ article.about{
 form{
   width: 50px;
 }
+
 form label{
   display: block;
   width: 100%;
