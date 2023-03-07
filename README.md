@@ -5,12 +5,16 @@ de udemy.
 *Puede ir cambiando donde me quede*
 
 # Secciones del cursos (Progreso)
-## Node JS
+## JavaScript -MEAN (MongoDB, ExpressJs, AngularJs, NodeJs)
 Secciones     | Completadas
 ------------- | -------------
-60 - 64       | Completado - (NodeJS: Javascript en el servidor, Empezando a desarrollar un backend con NodeJs, El Controlador del backend de Node, Subir Archivos en NodeJs)
-65 - ??       | En progreso - (Primeros pasos en el proyecto de Angular(MEAN stack),Maquetacion del sitio web tipo portafolio, Página principal (webbapp con Angular), Seccion de creacion de nuevos elementos (proyecto portafolio),  ).
+60 - 64       | Completado
+65 - ??       | En progreso 
 
+Secciones     | Completadas
+------------- | -------------
+60 - 64       | (NodeJS: Javascript en el servidor, Empezando a desarrollar un backend con NodeJs, El Controlador del backend de Node, Subir Archivos en NodeJs)
+65 - ??       | (Primeros pasos en el proyecto de Angular(MEAN stack),Maquetacion del sitio web tipo portafolio, Página principal (webbapp con Angular), Seccion de creacion de nuevos elementos (proyecto portafolio), Listado principal del portafolio (Angular), ).
 
 <!-- ## -------- Finalizado -------- ## -->
 ---
