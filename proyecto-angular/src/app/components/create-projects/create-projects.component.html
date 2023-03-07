@@ -36,7 +36,7 @@
     </p>
     <p>
       <label for="name">Imagen: </label>
-      <input type="file" name="image" placeholder="Sube una imagen"/>
+      <input type="file" name="image" placeholder="Sube una imagen" (change)="fileChangeEvent($event)"/>
     </p>
     <input type="submit"
     [disabled]="!projectForm.form.valid" value="Enviar">
