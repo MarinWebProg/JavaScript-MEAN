@@ -18,4 +18,18 @@ export class ProjectService{
   testService(){
     return 'Probando el servicio de Angular'
   }
+
+  //Para empezar a guardar mediante la conexion de nuestra api
+  saveProject(project: Project): Observable<any>{
+    let params = JSON.stringify(project);
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+      try {
+        console.log("Pasa el guardado")
+      } catch (e) {
+        console.log("Este seria el error: "+e);
+      }
+      return this._http.post(this.url+'save-project',params,{headers: headers});
+
+  }
+
 }

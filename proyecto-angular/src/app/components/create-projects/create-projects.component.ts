@@ -11,14 +11,14 @@ import { ProjectService } from 'src/app/services/project.service';
 export class CreateProjectsComponent implements OnInit{
   public title: string;
   public project: Project;
+  public status: string;
 
   constructor(
     private _projectService: ProjectService
   ){
     this.title = "Crear Proyecto";
-    this.project = new  Project(
-      '','','','',2023,'',''
-    );
+    this.project = new Project('','','','',2023,'','');
+    this.status = '';
   }
 
   //onInit
@@ -27,6 +27,22 @@ export class CreateProjectsComponent implements OnInit{
 
   onSubmit(form: any){
     console.log(this.project);
+    this._projectService.saveProject(this.project).subscribe(
+      (response) =>{
+        console.log(response);
+        if(response.project){
+          this.status = 'success'
+          form.reset();
+        }else{
+          this.status='failed'
+        }
+      },
+      err =>{
+         console.log(<any> err);
+
+      }
+
+    );
 
   }
 }

@@ -214,3 +214,20 @@ form input[disabled] {
   color: white;
   margin-left: 5px;
 }
+/*Mensaje en caso de un error en formulario*/
+.message{
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+.success{
+  background: green;
+  color: white;
+}
+.message a{
+  color: white;
+}
+.failed{
+  background: red;
+  color: white;
+}

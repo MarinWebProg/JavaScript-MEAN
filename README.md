@@ -13,6 +13,7 @@ Secciones     | Completadas
 
 
 <!-- ## -------- Finalizado -------- ## -->
+---
 
 # Comandos
 ## Para instalar el proyecto y/o dependencias:
@@ -33,6 +34,7 @@ npm install [nombre de las dependencias] --save-dev
 ```bash
 npm start
 ```
+---
 # Comandos para Angular
 
 ## Para iniciar proyecto en AngularJS:
