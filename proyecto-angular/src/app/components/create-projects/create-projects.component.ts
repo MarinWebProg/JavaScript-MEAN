@@ -35,7 +35,7 @@ export class CreateProjectsComponent implements OnInit{
     console.log(this.project);
     //Guardar los datos
     this._projectService.saveProject(this.project).subscribe(
-      (response) =>{
+      response =>{
         console.log(response);
         if(response.project){
           //Subir la imagen
