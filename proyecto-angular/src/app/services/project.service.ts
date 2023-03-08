@@ -34,11 +34,6 @@ export class ProjectService{
   //Para mostrar los proyectos (Lo que esta almacenado en MongoDB)
   getProjects(): Observable<any>{
     let headers = new HttpHeaders().set('Content-Type','application/json');
-    try {
-      console.log("Pasa la visualizacion")
-    } catch (e) {
-      console.log("Este seria el error: "+e);
-    }
     return this._http.get(this.url+'projects',{headers: headers});
   }
 
