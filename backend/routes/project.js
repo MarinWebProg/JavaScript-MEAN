@@ -19,6 +19,7 @@ route.put('/project/:id', projectController.updateProject);//Para actualizar
 route.delete('/project/:id', projectController.deleteProject);//Para borrar 
 
 //Nueva ruta para la imagen
-route.post('/upload-image/:id',multipartMiddleware,projectController.uploadImage);
+route.post('/upload-image/:id',multipartMiddleware,projectController.uploadImage);//Para subir una imagen
+route.get('/get-image/:image',projectController.getImageFile);//Para obetener la imagen de nuestra api
 
 module.exports = route;
