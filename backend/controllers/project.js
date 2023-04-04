@@ -185,15 +185,25 @@ let controller = {
         let file = req.params.image;
         let path_file = './uploads/'+file;
         
-        fs.stat(path_file,(error) => {
-            if(!error){
-                return res.sendFile(path.resolve(path_file))
-            }else{
-                return res.status(404).send({
-                    message: "No existe la imagen"
-                })
-            }
-        });
+        // fs.stat(path_file,(error) => {
+        //     if(!error){
+        //         return res.sendFile(path.resolve(path_file))
+        //     }else{
+        //         return res.status(404).send({
+        //             message: "No existe la imagen"
+        //         })
+        //     }
+        // });
+
+        fs.exists(path_file, (exists) => {
+			if(exists){
+				return res.sendFile(path.resolve(path_file));
+			}else{
+				return res.status(200).send({
+					message: "No existe la imagen..."
+				});
+			}
+		});
        
     },
 

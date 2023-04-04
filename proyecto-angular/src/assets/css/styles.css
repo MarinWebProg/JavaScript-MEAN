@@ -96,14 +96,15 @@ header a:hover,
 
 /*Contenedor principal-Espacio principal*/
 #content{
-  min-height: 500PX;
+  min-height: 600PX;
   padding-top: 120PX;
-  width: 85%;
+  width: 75%;
   margin: 0px auto;
   box-shadow: 0px 0px 40px black;
   background: rgba(255, 255, 255, 0.7);
   border-left:1px solid #b7b7b7 ;
   border-right:1px solid #b7b7b7 ;
+  padding-top: 120px ;
 }
 
 /*Footer*/
@@ -230,4 +231,24 @@ form input[disabled] {
 .failed{
   background: red;
   color: white;
+}
+
+/*Pagina de los proyectos*/
+.project{
+  list-style: none;
+  display: block;
+  float: left;
+  width: 27%;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.project .image{
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.project img{
+  width: 120px;
 }
