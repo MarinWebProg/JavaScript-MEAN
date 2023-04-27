@@ -167,6 +167,20 @@ article.about{
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
+/* Container en el apartado de details.component*/
+.container .image{
+  float: left;
+  width: 47%;
+}
+.container .image img{
+  width: 50%;
+}
+.container .data{
+  float: left;
+  width: 30%;
+  margin-left: 25px;
+}
+
 form{
   width: 80%;
 }
@@ -187,7 +201,8 @@ form textarea{
 }
 /*Para darle estilo a los botones incluyendo el submit*/
 form button,
-form input[type="submit"]{
+form input[type="submit"],
+.button-edit,.button-delete{
   font-size: 17px;
   padding: 10px;
   display: block;
@@ -197,6 +212,25 @@ form input[type="submit"]{
   border: 1px solid rgb(45, 15, 80,1); /*Se puede usar igual el metodo rgb en border*/
   cursor: pointer;
 }
+/*Botones del apartado de details*/
+.button-edit,.button-delete{
+  width: 40%;
+  text-decoration: none;
+  float:left;
+  margin-right: 10px;
+
+}
+.button-edit{
+  background: rgb(6, 40, 133);
+  border: 2px solid black;
+
+}
+.button-delete{
+  background: rgb(131, 1, 1);
+  border: 2px solid black;
+}
+/*Botones del apartado de details*/
+
 form button:hover,
 form input[type="submit"]:hover{
   color: white;
@@ -256,3 +290,4 @@ form input[disabled] {
   text-decoration: none;
   color: black;
 }
+/**/
