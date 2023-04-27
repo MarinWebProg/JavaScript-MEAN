@@ -252,3 +252,7 @@ form input[disabled] {
 .project img{
   width: 120px;
 }
+.project a{
+  text-decoration: none;
+  color: black;
+}
