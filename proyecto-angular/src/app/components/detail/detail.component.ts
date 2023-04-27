@@ -45,4 +45,18 @@ export class DetailComponent implements OnInit {
     )
   }
 
+  //Para la funcion del boton de borrado
+  deleteProject(id:any){
+    this._projectService.deleteProject(id).subscribe(
+      response => {
+        if(response.project){
+          this._router.navigate(['/proyecto'])
+        }
+      },
+      (error:any) =>{
+        console.log(<any>error);
+      }
+    )
+  }
+
 }
