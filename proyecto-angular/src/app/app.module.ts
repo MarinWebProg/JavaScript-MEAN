@@ -15,7 +15,6 @@ import { EditComponent } from './components/edit/edit.component';
 import { routing,appRoutingProviders } from './app.routing';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
