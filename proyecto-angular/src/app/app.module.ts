@@ -10,10 +10,10 @@ import { CreateProjectsComponent } from './components/create-projects/create-pro
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { EditComponent } from './components/edit/edit.component';
 
 import { routing,appRoutingProviders } from './app.routing';
 
-//
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import { routing,appRoutingProviders } from './app.routing';
     ContactComponent,
     ErrorComponent,
     DetailComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
