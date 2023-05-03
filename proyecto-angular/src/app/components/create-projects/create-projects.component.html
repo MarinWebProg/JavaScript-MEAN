@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="project">
   <h2>{{title}}</h2>
 
   <div class="message success" *ngIf="status == 'success'">
@@ -36,8 +36,14 @@
     </p>
     <p>
       <label for="name">Imagen: </label>
+      <span class="image" *ngIf="project.image" style="
+      float: none;">
+        <!-- Si se llamara al endpoint que requerimos siempre poner ( {{}} ) -->
+        <img src="{{url+'get-image/'+project.image}}" style="width: 100px;">
+      </span><br/>
       <input type="file" name="image" placeholder="Sube una imagen" (change)="fileChangeEvent($event)"/>
     </p>
+
     <input type="submit"
     [disabled]="!projectForm.form.valid" value="Enviar">
   </form>
