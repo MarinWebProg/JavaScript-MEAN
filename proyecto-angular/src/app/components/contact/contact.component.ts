@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+declare const $:any;
 
 @Component({
   selector: 'app-contact',
@@ -12,12 +12,17 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(){
-    $("#logo").click(function (e) {
+    $("#logo").click(function (e:any) {
       e.preventDefault();
       $("header")
           .css("background", "green")
           .css("height", "50px");
+    });
 
+    $('.galeria').bxSlider({
+      mode: 'fade',
+      captions: true,
+      slideWidth: 600
     });
   }
 
