@@ -218,6 +218,7 @@ form input[type="submit"],
   text-decoration: none;
   float:left;
   margin-right: 10px;
+  text-align: center;
 
 }
 .button-edit{
@@ -290,4 +291,9 @@ form input[disabled] {
   text-decoration: none;
   color: black;
 }
-/**/
+/*Para estilo de confirmacion de eliminacion de proyecto*/
+.confirm{
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
