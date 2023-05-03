@@ -49,6 +49,7 @@ export class ProjectService{
     return this._http.delete(this.url+'project/'+id,{headers: headers});
   }
 
+
   //Para edicion de los proyectos
   updateProject(project:any): Observable<any>{
     let params = JSON.stringify(project);
