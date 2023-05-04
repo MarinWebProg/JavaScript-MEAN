@@ -13,6 +13,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 
 import { routing,appRoutingProviders } from './app.routing';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { routing,appRoutingProviders } from './app.routing';
     ErrorComponent,
     DetailComponent,
     EditComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
