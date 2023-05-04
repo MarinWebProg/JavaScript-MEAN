@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(){
+
   }
 
   cargarSlider(){
@@ -24,6 +25,7 @@ export class ContactComponent implements OnInit {
 
   resetearSlider(){
     this.anchuraToSlider = 0;
+
   }
 
 }
