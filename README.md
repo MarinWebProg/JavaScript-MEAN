@@ -2,7 +2,7 @@
 
 Curso de Máster en JavaScript
 de udemy.
-*Puede ir cambiando donde me quede*
+*URL: https://www.udemy.com/course/master-en-javascript-aprender-js-jquery-angular-nodejs-y-mas/*
 
 ## -------- Finalizado -------- ##
 # Secciones del cursos (Terminado)
