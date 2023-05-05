@@ -55,3 +55,9 @@ ng g component [Nombre del componente]
 ## Para generar componentes y saltar los tests:
 ```bash
 ng g component [Nombre del componente] --skip-tests
+```
+
+## Para generar directivas y saltar los tests:
+```bash
+ng g directive [Nombre de la directiva] --skip-tests
+```
