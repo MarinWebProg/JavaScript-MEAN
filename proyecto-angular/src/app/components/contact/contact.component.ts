@@ -21,9 +21,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(){
     let opcion_clasica = document.querySelector('#texto')?.innerHTML; //Este la opcion de JS que busca la info con el viewchild
-    console.log("1 ----> "+opcion_clasica);
-    console.log("2 ----> ",this.textos);
-    console.log("3 ----> ",this.textos?.nativeElement.textContent);
+    // console.log("1 ----> "+opcion_clasica);
+    // console.log("2 ----> ",this.textos);
+    // console.log("3 ----> ",this.textos?.nativeElement.textContent);
+    // alert(this.textos?.nativeElement.textContent);
 
   }
 
